@@ -43,6 +43,24 @@
         }]
     },
     {
+        "description": "Spacebar / Enter on Long Press",
+        "manipulators": [{
+            "type": "basic",
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": {
+                    "optional": ["any"]
+                }
+            },
+            "to_if_alone": [{"key_code": "spacebar"}],
+            "to_if_held_down": [{"key_code": "return_or_enter"}],
+            "parameters": {
+                "basic.to_if_held_down_threshold_milliseconds": 1500,
+                "basic.to_if_alone_timeout_milliseconds": 1500
+            }
+        }]
+    },
+    {
         "description": "Right-Command Accents",
         "manipulators": [
         {

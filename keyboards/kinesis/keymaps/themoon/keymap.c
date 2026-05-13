@@ -1343,9 +1343,9 @@ void status_finished (qk_tap_dance_state_t *state, void *user_data) {
       case DOUBLE_TAP:
           blink_all_leds_short_and_short();
           if (isMac) {
+            down(KC_LGUI); down(KC_LALT); SEND_STRING(SS_DOWN(X_POWER) SS_UP(X_POWER)); up(KC_LALT); up(KC_LGUI); break;
             // sleep is not supported in hackintosh - just send usual double tap keystroke
-            with_1_mod(KC_F20, KC_LCTL); blink_all_leds_short_and_short(); break;
-            // down(KC_LGUI); down(KC_LALT); SEND_STRING(SS_DOWN(X_POWER) SS_UP(X_POWER)); up(KC_LALT); up(KC_LGUI); break;
+            //with_1_mod(KC_F20, KC_LCTL); blink_all_leds_short_and_short(); break;
           }
           if (isPc) {
             // sleep
